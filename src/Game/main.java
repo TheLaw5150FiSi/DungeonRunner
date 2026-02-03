@@ -45,7 +45,7 @@ public class main {
             ███████╗███████╗███████╗    ██║  ██║╚██████╔╝██║ ╚████║██║ ╚████║███████╗██║  ██║
             ╚══════╝╚══════╝╚══════╝    ╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═══╝╚═╝  ╚═══╝╚══════╝╚═╝  ╚═
             """;
-        static int delay = 5;
+    static int delay = 5;
 
     static Random rand = new Random();
     static Scanner entry = new Scanner(System.in);
@@ -225,6 +225,7 @@ public class main {
             System.out.println("Du hast den Dungeon überlebt!");
         }
     }
+
     //Startsequenz
     public static void startSequenz() {
         for (int i = 0; i < headline.length(); i++) {
@@ -242,6 +243,7 @@ public class main {
         System.out.println("Um deine Stats zu sehen, tippe !Status ein.");
         System.out.println(" ");
     }
+
     // Monster optionen
     public static void getMonster() {
         monsterRandom = rand.nextInt(1, 101);
@@ -277,9 +279,11 @@ public class main {
             monsterDmgOvertime = 15;
             monsterExp = 98 + (playerLevel * 2);
             monsterHp = 398 + (playerLevel * 2);
+        }
     }
+
     //Angriffe
-    public static void playerAttack (int playerAttackStr)  {
+    public static void playerAttack(int playerAttackStr) {
         playerDamage = rand.nextInt(1, playerAttackStr) + playerStr;
         monsterHp -= playerDamage;
         playerCurrentLife -= monsterDamage;
@@ -294,8 +298,9 @@ public class main {
         }
 
     }
+
     //Level Kontrolle
-    public static void levelControl(){
+    public static void levelControl() {
         playerCurrentExp = 0;
         playerNeededExp += 25;
         playerMaxLife += 5;
@@ -305,6 +310,7 @@ public class main {
         System.out.println("Dein maximales Leben hat sich auf " + playerMaxLife + " erhöht!");
         System.out.println("Dein Stärkewert hat sich auf " + (10 + playerStr) + " erhöht");
     }
+
     //Statusausgabe
     public static void statusMessage() {
         System.out.println("-----STATUS-----");
@@ -319,6 +325,7 @@ public class main {
         System.out.println(" ");
         position--;
     }
+
     //Raum Heilung
     public static void healEel() {
         if (playerMaxLife - playerCurrentLife <= 5) {
@@ -335,6 +342,4 @@ public class main {
     }
 
 
-
 }
-
