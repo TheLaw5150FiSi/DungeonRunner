@@ -1,0 +1,8 @@
+
+
+shop items
+
+großer heilaal +20hp -50 gold
+exp allexier +20 exp -125 gold
+fähigkeit zitteraal +str -275 gold
+fähigkeit blitz-aura +def -275 gold
